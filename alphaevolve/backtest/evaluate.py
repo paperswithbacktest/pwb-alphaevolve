@@ -16,8 +16,8 @@ import backtrader as bt
 import pandas as pd
 
 from examples import config as example_config
-from alphaevolve.data.loader import load_ohlc, add_feeds_to_cerebro
-from alphaevolve.utils import metrics as mt
+from .data import load_ohlc, add_feeds_to_cerebro
+from . import metrics as mt
 
 
 # ------------------------------------------------------------------ #

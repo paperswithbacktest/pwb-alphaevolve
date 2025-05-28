@@ -17,7 +17,7 @@ from alphaevolve.store.sqlite import ProgramStore
 from alphaevolve.config import settings
 from alphaevolve.llm_engine import prompts, openai_client
 from alphaevolve.evolution.patching import apply_patch
-from alphaevolve.evaluator.backtest import evaluate
+from alphaevolve.backtest import evaluate
 from alphaevolve.strategies import templates  # seed strategies
 
 logger = logging.getLogger(__name__)

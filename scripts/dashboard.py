@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 
 from alphaevolve.store.sqlite import ProgramStore
 from examples import config as example_config
-from alphaevolve.evaluator.backtest import (
+from alphaevolve.backtest.evaluate import (
     _load_module_from_code,  # type: ignore  (private helper is okay for internal app)
     _find_strategy,  # type: ignore
     _run_backtest,  # type: ignore
@@ -84,7 +84,7 @@ with col_chart:
         st.error(f"Failed to back‑test: {e}")
     else:
         # _run_backtest currently returns KPIs dict only; re‑run here to also get curve
-        from alphaevolve.data.loader import load_ohlc, add_feeds_to_cerebro
+        from alphaevolve.backtest import load_ohlc, add_feeds_to_cerebro
         import backtrader as bt
 
         symbols = ("SPY", "EFA", "IEF", "VNQ", "GSG")
